@@ -1,11 +1,73 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <script defer type="text/javascript" src="index.js"></script>
-        </head>
-    <body>
-        <div> id="Practice Safe Sets!"
-            <!--workout img here-->
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Safe Sets!</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .modal-content {
+            position: relative;
+        }
+
+        .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Practice Safe Sets!</h1>
+
+    <div class="columns-container">
+        <div class="column">
+            <h2>Lifting in the Gym</h2>
+            <p>
+                <label for="exercise-set-home">Choose Muscle Focus:</label>
+                <select name="exercise-set-home" id="exercise-set-home">
+                    <option value="glutesQuads">Glutes and Quads</option>
+                    <option value="pushDay">Back and Biceps</option>
+                    <option value="glutes">Glutes</option>
+                    <option value="pullday">Chest Tris and Shoulders</option>
+                    <option value="glutesHams">Glutes and Hamstrings</option>
+                </select>
+            </p>
+
+            <form id="workoutForm">
+                <!-- Submit button -->
+                <input type="submit" value="Generate Workout">
+            </form>
         </div>
-    </body>
+    </div>
+
+    <!-- Modal -->
+    <div id="workoutModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p id="workoutDetails"></p>
+        </div>
+    </div>
+
+    <script defer type="text/javascript" src="index.js"></script>
+</body>
+
 </html>

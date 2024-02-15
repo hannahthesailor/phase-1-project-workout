@@ -1,11 +1,28 @@
 {
-    "Workouts": [
-        {
-            "id": 1,
-            "name": "Glutes",
-            "exercises": "hip thrusts, RDLs, glute focused back extensions, hip abductions, kickbacks ",
-            "How many": "3 sets of max 12 reps for each exercise",
-            "Tips": "If you can do more than 12 reps it's time to increase the weight!"
-        }
-    ]
-}
+    "glutesQuads": {
+      "id": "glutesQuads",
+      "name": "Glutes and Quads Workout",
+      "details": "Work on your glutes and quads with targeted exercises."
+    },
+    "pushDay": {
+      "id": "pushDay",
+      "name": "Back and Biceps Push Day",
+      "details": "Focus on your back and biceps during your push day."
+    },
+    "glutes": {
+      "id": "glutes",
+      "name": "Glutes Workout",
+      "details": "Engage in glute-specific exercises for a stronger lower body."
+    },
+    "pullday": {
+      "id": "pullday",
+      "name": "Chest, Tris, and Shoulders Pull Day",
+      "details": "Train your chest, triceps, and shoulders during your pull day."
+    },
+    "glutesHams": {
+      "id": "glutesHams",
+      "name": "Glutes and Hamstrings Workout",
+      "details": "Strengthen your glutes and hamstrings with effective workouts."
+    }
+  }
+  
