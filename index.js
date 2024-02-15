@@ -1,38 +1,58 @@
-// index.js
-
-document.getElementById("workoutForm").addEventListener("submit", function (event) {
+document.getElementById("workoutForm").addEventListener("submit", async function (event) {
     event.preventDefault();
 
-    var workoutModal = document.getElementById("workoutModal");
-    var workoutDetails = document.getElementById("workoutDetails");
-    var muscleFocus = document.getElementById("exercise-set-home").value;
+    const workoutModal = document.getElementById("workoutModal");
+    const workoutDetails = document.getElementById("workoutDetails");
+    const muscleFocus = document.getElementById("exercise-set-gym").value;
 
-    // Customize the workout details text based on the selected muscle focus
-    var workoutText = getWorkoutDetailsText(muscleFocus);
-    
-    workoutDetails.innerHTML = workoutText;
-    workoutModal.style.display = "block";
+    try {
+        const workoutText = await getWorkoutDetailsText(muscleFocus);
+        displayWorkoutPopup(workoutDetails, workoutModal, workoutText);
+    } catch (error) {
+        console.error('Error:', error);
+        displayWorkoutPopup(workoutDetails, workoutModal, "Error fetching workout details.");
+    }
 });
 
-function getWorkoutDetailsText(muscleFocus) {
-    // Customize the workout details text based on the selected muscle focus
-    switch (muscleFocus) {
-        case "glutesQuads":
-            return "Work on your glutes and quads with targeted exercises.";
-        case "pushDay":
-            return "Focus on your back and biceps during your push day.";
-        case "glutes":
-            return "Engage in glute-specific exercises for a stronger lower body.";
-        case "pullday":
-            return "Train your chest, triceps, and shoulders during your pull day.";
-        case "glutesHams":
-            return "Strengthen your glutes and hamstrings with effective workouts.";
-        default:
-            return "No specific workout details available.";
+async function getWorkoutDetailsText(muscleFocus) {
+    const apiUrl = `http://localhost:3000/Workouts`;
+
+    try {
+        const response = await fetch(apiUrl);
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const data = await response.json();
+
+        console.log('Received data:', data);
+
+        if (Array.isArray(data) && data.length > 0) {
+            const workout = data.find(item => item.id === muscleFocus);
+
+            if (workout) {
+                const { name, details, "pro tip": proTip } = workout;
+                return `${name}: ${details}\nPro Tip: ${proTip}`;
+            } else {
+                return "No specific workout details available.";
+            }
+        } else {
+            throw new Error('Invalid data format received.');
+        }
+    } catch (error) {
+        console.error('Error fetching data:', error.message);
+        throw error; // Re-throw the error to be caught
     }
 }
 
+
+function displayWorkoutPopup(workoutDetails, workoutModal, workoutText) {
+    workoutDetails.innerHTML = workoutText;
+    workoutModal.style.display = "block";
+}
+
 function closeModal() {
-    var workoutModal = document.getElementById("workoutModal");
+    const workoutModal = document.getElementById("workoutModal");
     workoutModal.style.display = "none";
 }

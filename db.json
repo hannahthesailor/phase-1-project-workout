@@ -1,28 +1,36 @@
+
 {
-    "glutesQuads": {
+    "Workouts": [
+   {
       "id": "glutesQuads",
       "name": "Glutes and Quads Workout",
-      "details": "Work on your glutes and quads with targeted exercises."
+      "details": "Hip Thrust, Leg Press, Goblet Squat, Leg Extension, Step Up",
+      "pro tip" : "Did 12 reps feel easy? Time to increase the weight!"
     },
-    "pushDay": {
+    {
       "id": "pushDay",
-      "name": "Back and Biceps Push Day",
-      "details": "Focus on your back and biceps during your push day."
+      "name": "Chest, Tris, and Shoulders Workout",
+      "details": "Bench Press, Dumbbell Shoulder Press, Tricep Press, Dumbbell Shoulder Raise, Cable Tricep Extension, Push Up",
+      "pro tip" : "Don't forget yout spotter!"
     },
-    "glutes": {
+    {
       "id": "glutes",
       "name": "Glutes Workout",
-      "details": "Engage in glute-specific exercises for a stronger lower body."
+      "details": "Glute Bridge, RDL, Cable Kick Back, Leg Press, Split Squat",
+      "pro tip" : "Slow and steady so you feel the burn!"
     },
-    "pullday": {
+    {
       "id": "pullday",
-      "name": "Chest, Tris, and Shoulders Pull Day",
-      "details": "Train your chest, triceps, and shoulders during your pull day."
+      "name": "Back and Biceps",
+      "details": "Dumbbell Row, Hammer Curls, Cable Curl, Lat Pulldown, Cable Row, Pull Up",
+      "pro tip" :"You can use a band to assit your pull ups!"
     },
-    "glutesHams": {
+   {
       "id": "glutesHams",
       "name": "Glutes and Hamstrings Workout",
-      "details": "Strengthen your glutes and hamstrings with effective workouts."
-    }
+      "details": "Hip Thrust, Single Leg Press, Leg Curl, Walking Lunge, Split Squat",
+      "pro tip" : "If you don't need to rest between sets you can go heavier!"
+     }
+    ]
   }
   
