@@ -1,0 +1,11 @@
+{
+    "Workouts": [
+        {
+            "id": 1,
+            "name": "Glutes",
+            "exercises": "hip thrusts, RDLs, glute focused back extensions, hip abductions, kickbacks ",
+            "How many": "3 sets of max 12 reps for each exercise",
+            "Tips": "If you can do more than 12 reps it's time to increase the weight!"
+        }
+    ]
+}
