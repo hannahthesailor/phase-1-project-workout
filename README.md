@@ -14,3 +14,17 @@ json-server --watch db.json
 Open new terminal and run:
 
 open index.html
+
+# Sources
+
+thank you to
+
+https://www.animatedimages.org/
+
+for our animated sun
+
+and 
+
+https://zenquotes.io/
+
+for our inpirational quotes 
