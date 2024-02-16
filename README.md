@@ -7,9 +7,10 @@ New to the gym? Our simple workout generator makes it easy to get started! We gr
 3. Toggle through quotes with keydown
 
 # To Access
-In terminal :
+In terminal run:
+
 json-server --watch db.json
 
-Open new terminal :
+Open new terminal and run:
 
 open index.html
