@@ -34,7 +34,11 @@ async function getWorkoutDetailsText(muscleFocus) {
 
             if (workout) {
                 const { name, details, "pro tip": proTip } = workout;
-                return `${name}: ${details}\nPro Tip: ${proTip}`;
+
+                // Split keys and values, join with line breaks and extra space
+                const workoutText = `${name}:\n${details.split('\n').join('\n\n')}\n\nPro Tip:\n${proTip.split('\n').join('\n\n')}\n\n`;
+
+                return workoutText;
             } else {
                 return "No specific workout details available.";
             }
@@ -46,6 +50,7 @@ async function getWorkoutDetailsText(muscleFocus) {
         throw error; 
     }
 }
+
 
 
 function displayWorkoutPopup(workoutDetails, workoutModal, workoutText) {
@@ -119,11 +124,43 @@ const minutes = parseInt(diff/1000/60);
 console.log(minutes,seconds);
 
 
-const myInput = document.getElementById('myInput');
+const quotes = [
+    "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+    "Life is what happens when you're busy making other plans. - John Lennon",
+    "The future belongs to those who believe in the beauty of their dreams. - Eleanor Roosevelt",
+    "Success is not final, failure is not fatal: It is the courage to continue that counts. - Winston S. Churchill",
+    "The only way to do great work is to love what you do. - Steve Jobs",
+    "In the end, we will remember not the words of our enemies, but the silence of our friends. - Martin Luther King Jr.",
+    "Believe you can and you're halfway there. -Theodore Roosevelt",
+    "Do not wait to strike till the iron is hot, but make it hot by striking. - William Butler Yeats",
+    "Life is really simple, but we insist on making it complicated. - Confucius",
+    "The only place where success comes before work is in the dictionary. - Vidal Sassoon"
+];
 
-myInput.addEventListener('keyup', handleKeyup);
 
-function handleKeyup() {
-    fetch('')
+let currentIndex = 0;
 
+function displayCurrentQuote() {
+    const quoteDisplay = document.getElementById("quote-display");
+    quoteDisplay.textContent = quotes[currentIndex];
 }
+
+function showNextQuote() {
+    currentIndex = (currentIndex + 1) % quotes.length;
+    displayCurrentQuote();
+}
+
+function showPreviousQuote() {
+    currentIndex = (currentIndex - 1 + quotes.length) % quotes.length;
+    displayCurrentQuote();
+}
+
+document.addEventListener("DOMContentLoaded", displayCurrentQuote);
+
+document.addEventListener("keydown", (event) => {
+    if (event.key === "ArrowRight") {
+        showNextQuote();
+    } else if (event.key === "ArrowLeft") {
+        showPreviousQuote();
+    }
+});

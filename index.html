@@ -7,7 +7,7 @@
     <title>Practice Safe Sets!</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        /* Modal styles */
+
         .modal {
             display: none;
             position: fixed;
@@ -40,7 +40,7 @@
 
     <div class="columns-container">
         <div class="column">
-            <h2>Lifting in the Gym</h2>
+            <h2>Pick Your Work Out</h2>
             <form id="workoutForm">
                 <!-- Choose Muscle Focus -->
                 <label for="exercise-set-gym">Choose Muscle Focus:</label>
@@ -56,37 +56,13 @@
                 <input type="submit" value="Generate Workout">
             </form>
             <p>
-                Take a 2 minute rest! 
-                <p>Use the timer below so you dont lose track of how long you've been resting!
-                <p>
-                    <!DOCTYPE html>
-                    <!DOCTYPE html>
-                    <html lang="en">
-                    <head>
-                        <meta charset="UTF-8">
-                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                        <title>Simple Timer</title>
-                        <!-- No need for styling for the timer in this example -->
-                    </head>
-                    <body>
-                        <div class="main">
-                            <div id="timer"></div>
-                            <button id="start">Start</button>
-                            <button id="stop" disabled>Stop</button>
-                        </div>
-                    
-                        <!-- Include your JavaScript file -->
-                        <script src="index.js"></script>
-                    </body>
-                    </html>
-                    
-
-                </p>
+                <b>Take a 2-minute rest!</b>
+                <p>Start the timer below so you don't lose track of how long you've been resting!
             </p>
         </div>
     </div>
 
-    <!-- Modal -->
+ 
     <div id="workoutModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
@@ -94,7 +70,20 @@
         </div>
     </div>
 
+ 
+    <div class="main">
+        <div id="timer"></div>
+        <button id="start">Start</button>
+        <button id="stop" disabled>Stop</button>
+    </div>
+
+    <h3>Food for Thought While You Rest ⤵</h3>
+    <div id="quote-display">
+  
+    </div>
     <script defer type="text/javascript" src="index.js"></script>
 </body>
+
+<a href="https://www.animatedimages.org/cat-sun-278.htm"><img src="https://www.animatedimages.org/data/media/278/animated-sun-image-0806.gif" border="0" alt="animated-sun-image-0806" /></a>
 
 </html>

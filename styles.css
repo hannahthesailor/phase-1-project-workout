@@ -1,0 +1,31 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to bottom, #ffcc00, #ff6600); /* Replace these colors with your desired gradient */
+    font-family: 'Arial', sans-serif; /* Optional: Set a default font */
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+}
+.column {
+    text-align: center;
+}
+.main {
+    text-align: center;
+}
+body {
+    text-align: left;
+}
+.modal-content {
+    margin: 20px;
+    line-height: 1.5;
+    font-size: 16px;
+    white-space: pre-line; /* This property allows the keys to be displayed on separate lines */
+}

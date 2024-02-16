@@ -1,2 +1,2 @@
 # Workout Project
-Generate your workout!
+New to the gym? Our simple workout generator makes it easy to get started! We grouped complimentary muscles and exercises so the only heavy lifting you'll be doing is the weights! We've even equipped you with a timer so you can monitor how long you are resting and stay on track! Instead of doom scrolling why not toggle through some inpirational quotes using your left and right arrow keys while you rest!

@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(to right, #ffcc00, #ff6600); /* Replace these colors with your desired gradient */
+    font-family: 'Arial', sans-serif; /* Optional: Set a default font */
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 50px; /* Adjust as needed */
+}
