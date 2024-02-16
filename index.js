@@ -35,7 +35,7 @@ async function getWorkoutDetailsText(muscleFocus) {
             if (workout) {
                 const { name, details, "pro tip": proTip } = workout;
 
-                // Split keys and values, join with line breaks and extra space
+            
                 const workoutText = `${name}:\n${details.split('\n').join('\n\n')}\n\nPro Tip:\n${proTip.split('\n').join('\n\n')}\n\n`;
 
                 return workoutText;
@@ -137,12 +137,17 @@ const quotes = [
     "The only place where success comes before work is in the dictionary. - Vidal Sassoon"
 ];
 
+// ... (your existing code)
+
+const quotesInLowerCase = quotes.map(quote => quote.toLowerCase());
+
+console.log(quotesInLowerCase);
 
 let currentIndex = 0;
 
 function displayCurrentQuote() {
     const quoteDisplay = document.getElementById("quote-display");
-    quoteDisplay.textContent = quotes[currentIndex];
+    quoteDisplay.textContent = quotesInLowerCase[currentIndex];
 }
 
 function showNextQuote() {

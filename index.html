@@ -79,7 +79,11 @@
 
     <h3>Food for Thought While You Rest ⤵</h3>
     <div id="quote-display">
-  
+        function displayCurrentQuote() {
+            const quoteDisplay = document.getElementById("quote-display");
+            quoteDisplay.textContent = quotesInLowerCase[currentIndex];
+        }
+        
     </div>
     <script defer type="text/javascript" src="index.js"></script>
 </body>
